@@ -18,6 +18,31 @@ Route::get('/', function () {
     $data = [
         'name' => 'Mario',
         'surname' => 'Santoro',
+
+        'listLink'  => ['Home', 'AboutUs', 'Contact']
     ];
     return view('home', $data);
-});
+})->name('Home');
+
+
+Route::get('/aboutUs.blade.php', function () {
+
+    $data = [
+        'name' => 'Mario',
+        'surname' => 'Santoro',
+
+        'listLink'  => ['Home', 'AboutUs', 'Contact']
+    ];
+    return view('aboutUs', $data);
+})->name('AboutUs');
+
+Route::get('/contact.blade.php', function () {
+
+    $data = [
+        'name' => 'Mario',
+        'surname' => 'Santoro',
+
+        'listLink'  => ['Home', 'AboutUs', 'Contact']
+    ];
+    return view('contact', $data);
+})->name('Contact');
